@@ -21,14 +21,14 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://hw3-client.vercel.app/",
+    origin: "https://hw3-client.vercel.app",
     methods: ["GET", "POST"]
   }
 });
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://hw3-client.vercel.app/'
+  origin: 'https://hw3-client.vercel.app'
 }));
 
 app.use('/api', adsRouter);
